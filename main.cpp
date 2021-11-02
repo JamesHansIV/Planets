@@ -36,7 +36,8 @@
 
 int main() {
 	//Create Window
-	sf::RenderWindow window(sf::VideoMode(1200,800), "Planets", sf::Style::Titlebar | sf::Style::Resize | sf::Style::Close);
+	sf::VideoMode mode = { sf::VideoMode::getDesktopMode().width * 3 / 5, sf::VideoMode::getDesktopMode().height * 2 / 3 };
+	sf::RenderWindow window(mode, "Planets", sf::Style::Titlebar | sf::Style::Resize | sf::Style::Close);
 
 	//create hud
 	HUD hud(window);
